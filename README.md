@@ -17,7 +17,7 @@ Hooks를 통해 state를 함수형 컴포넌트에서도 사용이 가능해졌�
 - 생명주기(life-cycle)란?
   ![](https://velog.velcdn.com/images/abroak07/post/9dcb0a5d-0cea-441e-9110-f624e485a8cc/image.png)
   
-  - 컴포넌트가 마운트 된 후
-  - 컴포넌트가 업데이트 되고 난 후
-  - 컴포넌트가 언마운트 되기 전
+  - 컴포넌트가 마운트 된 후 (ComponentDidMount)
+  - 컴포넌트가 업데이트 되고 난 후(ComponentDidUpdate)
+  - 컴포넌트가 언마운트 되기 전(ComponentWillUnMount)
 
