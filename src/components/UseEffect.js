@@ -1,7 +1,6 @@
 import React from "react";
 import { Link, Routes, Route } from "react-router-dom";
 
-import UseAxios from "../UseEffect/UseAxios";
 import UseBeforeLeave from "../UseEffect/UseBeforeLeave";
 import UseClick from "../UseEffect/UseClick";
 import UseConfirm from "../UseEffect/UseConfirm";
@@ -22,7 +21,6 @@ function UseEffect() {
             <h4 >useEffect</h4>
             <hr />
             <ul>
-                <li><Link to="/useeffect/useaxios">UseAxios</Link></li>
                 <li><Link to="/useeffect/usebeforeleave">UseBeforeLeave</Link></li>
                 <li><Link to="/useeffect/useclick">UseClick</Link></li>
                 <li><Link to="/useeffect/useconfirm">UseConfirm</Link></li>
@@ -35,7 +33,6 @@ function UseEffect() {
                 <li><Link to="/useeffect/usetitle">UseTitle</Link></li>
             </ul>
             <Routes>
-                <Route path="/useaxios" element={<UseAxios />} />
                 <Route path="/usebeforeleave" element={<UseBeforeLeave />} />
                 <Route path="/useclick" element={<UseClick />} />
                 <Route path="/useconfirm" element={<UseConfirm />} />
