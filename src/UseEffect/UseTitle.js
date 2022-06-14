@@ -13,7 +13,7 @@ function UseTitle(){
     };
 
     const titleUpdater = UseTitle("Loading...")
-    setTimeout(()=>titleUpdater("useTitle"), 3000);
+    setTimeout(()=>titleUpdater("useTitle"), 2000);
     return(
         <>
             UseTitle
