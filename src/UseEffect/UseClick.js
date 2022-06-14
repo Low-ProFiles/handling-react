@@ -1,13 +1,33 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
-function UseClick(){
-    const input = useRef();
-    //getElementByid()를 하는 것과 비슷한 개념
-    setTimeout(()=>input.current.focus(),1000);
-    return(
+function UseClick() {
+    const UseClick = (onClick) => {
+        const element = useRef();
+        useEffect(() => {
+            const status = element.current
+            if (status) {
+                status.addEventListener("click", onClick)
+            }
+            return () => {
+                if (status) {
+                    status.removeEventListener("click", onClick)
+                }
+            };
+        },);
+
+        if(typeof onClick !== "function"){
+            return;
+        }
+        
+        return element;
+    }
+
+    const sayHello = () => console.log("say Hello")
+    const title = UseClick(sayHello);
+
+    return (
         <>
-            <h3>Hi</h3>
-            <input ref={input} placeholder="write here!"/>
+            <h3 ref={title}>Hi</h3>
         </>
     );
 };
